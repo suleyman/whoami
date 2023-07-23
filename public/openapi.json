@@ -1,0 +1,37 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "WhoAmI",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/whoami": {
+      "get": {
+        "summary": "Get ip and geolocation data",
+        "operationId": "getIpAndGeolocationData",
+        "parameters": [
+        ],
+        "responses": {
+          "200": {
+            "description": "IP address and geolocation data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "ip": {
+                      "type": "string"
+                    },
+                    "location": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
